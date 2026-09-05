@@ -1,0 +1,16 @@
+name: job variable practical
+on:
+  push:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    env:
+      APP_NAME: payment-service
+      NODE_ENV: production
+    steps:
+      - name: show application name
+        run: echo "Application name is $APP_NAME"
+        
+      - name: show node environment
+        run: echo "Node environment is $NODE_ENV"
