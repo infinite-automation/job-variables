@@ -16,8 +16,8 @@ jobs:
           echo "Application name is $APP_NAME"
           echo "Node environment is $NODE_ENV"
         
-      # - name: show node environment
-      #   run: |
-      #     echo "Application name is $APP_NAME"
-      #     echo "Node environment is $NODE_ENV"
+      - name: show node environment
+        run: |
+          echo "Application name is $APP_NAME"
+          echo "Node environment is $NODE_ENV"
           
