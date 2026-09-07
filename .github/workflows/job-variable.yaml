@@ -1,9 +1,6 @@
-name: workflows variable practical
+name: step variable practical
 on:
   push:
-env:
-    APP_NAME: my-app
-    NODE_ENV: production
 
 
 jobs:
@@ -12,7 +9,15 @@ jobs:
 
     steps:
       - name: show application name
-        run: echo "Application name is $APP_NAME"
+        env:
+          APP_NAME: my-app
+          NODE_ENV: production
+        run: |
+          echo "Application name is $APP_NAME"
+          echo "Node environment is $NODE_ENV"
         
-      - name: show node environment
-        run: echo "Node environment is $NODE_ENV"
+      # - name: show node environment
+      #   run: |
+      #     echo "Application name is $APP_NAME"
+      #     echo "Node environment is $NODE_ENV"
+          
