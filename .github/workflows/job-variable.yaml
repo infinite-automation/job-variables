@@ -1,13 +1,15 @@
-name: job variable practical
+name: workflows variable practical
 on:
   push:
+env:
+    APP_NAME: my-app
+    NODE_ENV: production
+
 
 jobs:
   build:
     runs-on: ubuntu-latest
-    env:
-      APP_NAME: payment-service
-      NODE_ENV: production
+
     steps:
       - name: show application name
         run: echo "Application name is $APP_NAME"
